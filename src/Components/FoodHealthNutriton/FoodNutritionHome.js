@@ -49,7 +49,7 @@ function FoodHealthHome() {
                         <div className='mt-4 p-5 rounded bg-warning text-white' style={{minHeight:"35vh"}}>
                             <Container>
                                 <h1 className='text-center'>Nutrition Information</h1>
-                                <p className='text-center'>dfjdfjdkfj fk</p>
+                                <p className='text-center'></p>
                             </Container>
                         </div>
                     </Col>
