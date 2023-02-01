@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import { useNavigate } from 'react-router-dom'
+import { Card } from 'react-bootstrap/esm';
 
 
 function FoodHealthHome() {
