@@ -1,14 +1,27 @@
-.user_input {
-    /* display: inline; */
-    /* margin: 2em auto; */
-    border: none;
-    padding: 0;
-    /* width: 10.5ch; */
-    background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/10ch 2px no-repeat;
-    font: 5ch droid sans mono, consolas, monospace;
-    letter-spacing: 0.5ch;
-  }
-  .user_input:focus {
-    outline: none;
-    color: dodgerblue;
-  }
+.div-center {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column;
+}
+.table-center{
+  margin: 0 auto;
+}
+
+.table-header {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.submit-button {
+  margin-top: 20px;
+  width: 20em;
+}
+.scramble-word{
+  color:#14A44D;
+  font-weight: 600;
+}
+.input-styling{
+  color:#14A44D;
+}
