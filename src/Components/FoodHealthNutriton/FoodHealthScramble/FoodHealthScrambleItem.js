@@ -84,14 +84,14 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                                 {results[index] ? (
                                     results[index].result === 'correct' ? (
                                         <>
-                                            <span style={{ color: 'green' }}>Correct</span>
+                                            <span style={{ color: 'green', fontSize:'1.5em', fontWeight:'bold' }}>Correct</span>
                                             <br />
                                             <span>{results[index].scramble_message}</span>
                                             <br />
                                             <img src={results[index].scramble_icon} alt={results[index].scramble_message} />
                                         </>
                                     ) : (
-                                        <span style={{ color: 'red' }}>Incorrect</span>)
+                                        <span style={{ color: 'red', fontSize:'1.5em', fontWeight:'bold' }}>Incorrect</span>)
                                 ) : null}
                             </td>
                         </tr>
