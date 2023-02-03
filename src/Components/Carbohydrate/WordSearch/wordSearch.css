@@ -1,0 +1,128 @@
+/*
+ * Custom translucent site header
+ */
+ body {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.cell {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-right: 1px #666 solid;
+  border-bottom: 1px #666 solid;
+  background-color: #efefef;
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 0px;
+  line-height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.1s;
+  user-select: none;
+  color: #555;
+}
+
+.cell:last-of-type {
+  border-right-width: 0px;
+}
+.row:last-of-type > .cell {
+  border-bottom-width: 0px;
+}
+
+.cell:hover {
+  background-color: #80d7fa; /* changed bg color here */
+  color: #fcfcfc;
+  cursor: pointer;
+  /* apply transition here */
+}
+
+.cell.hilighted {
+  background-color: #11a7e1;
+  color: #fcfcfc;
+}
+
+/* .row {
+  display: flex;
+  width: auto;
+} */
+
+/* .grid {
+  border: 4px #ccc solid;
+  width: auto;
+  margin: auto;
+  border: 1px #bbb solid;
+} */
+
+/* .container {
+  display: flex;
+  margin: auto;
+  width: 70%;
+} */
+
+.word-search-container {
+  /* width: 60%; */
+  /* height: 85vh; */
+  /* display: flex;
+  margin: auto;
+  padding: inherit;
+  text-align: justify;
+  padding-top: 1rem;
+  padding-bottom: 1rem; */
+  /* position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border:2px solid red; */
+  /* border:2px solid red; */
+  margin-top: 2rem;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+#word-list {
+  border: 1px #ececec solid;
+  letter-spacing: 1px;
+  background-color: #ddd;
+  /* padding: 10px; */
+}
+#word-list p{
+  color:red;
+  font-size: 1.5rem;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+#word-list li {
+  padding: 3% 5%;
+  margin: 5px;
+  border-left: 1px #333 solid;
+  transition: all 0.3s;
+  font-weight: lighter;
+  background-color: #f0f0f0;
+}
+
+#word-list li:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.ws-my-page-success-toast {
+  width: auto;
+  background-color: #7c6;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+.wrd {
+  background-color: #000
+}

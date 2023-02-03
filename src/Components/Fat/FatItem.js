@@ -9,10 +9,13 @@ function FatItem({ data }) {
     let navigate = useNavigate();
     return (
         <>
+        <Container>
+        <Row>
             {
+                
                 (!data) ? "Not Found" : data.map(item => {
                     return (
-                        <div className="food-health-nutrion-item-card d-flex flex-column justify-content-center align-items-center" key={item.id} >
+                        <Container key={item.id} >
                             <h3 className="food-health-nutrion-item-heading">{item.fname}</h3>
                             <img className="food-health-nutrion-item-img image-fluid" src={item.fimgUrl} alt="" />
                             <div className='instruction-container'>
@@ -20,10 +23,14 @@ function FatItem({ data }) {
                                 <p className='instruction-content'>{item.finstructions}</p>
                             </div>
                             <button className="food-health-nutrion-item-button" onClick={() => { navigate(`/${item.component}`) }}>Play</button>
-                        </div>
+                        </Container>
                     )
                 })
+                
             }
+            </Row>
+            </Container>
+            
         </>
     )
 }
