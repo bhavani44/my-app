@@ -12,7 +12,7 @@ const data = [
       col: 9
     },
     2: {
-      clue: "______ is a condition which results when insufficient food is eaten over a prolonged time.",
+      clue: "_______ is a condition which results when insufficient food is eaten over a prolonged time.",
       answer: "UNDERNUTRITION",
       row: 16,
       col: 2
