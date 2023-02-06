@@ -8,6 +8,7 @@ function FoodHealthScrambleItem({ scrambleWords }) {
     const [results, setResults] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState('');
+    const inputs = useRef([]);
 
     const handleCheck = (index, userInput) => {
         const newResults = [...results];
@@ -26,6 +27,7 @@ function FoodHealthScrambleItem({ scrambleWords }) {
     const handleKeyPress = (event, index, userInput) => {
         if (event.key === 'Enter') {
             handleCheck(index, userInput.toUpperCase());
+            inputs.current[index + 1].focus();
         }
     };
 
@@ -67,6 +69,7 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                                 <Row>
                                     <Col md={8}>
                                         <Form.Control
+                                        ref={input => inputs.current[index] = input}
                                             className='input-styling'
                                             type="text"
                                             placeholder='Enter Unscrambled word'
