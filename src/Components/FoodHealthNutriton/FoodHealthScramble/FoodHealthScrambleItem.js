@@ -48,6 +48,12 @@ function FoodHealthScrambleItem({ scrambleWords }) {
     }
     };
 
+    const handleRest = (e) => {
+        e.preventDefault();
+        setResults([]);
+        const inputs = Array.from(document.getElementsByTagName("input"));
+    inputs.forEach(input => input.value = '');
+    }
     const handleClose = () => {
         setShowModal(false);
     };
@@ -101,7 +107,10 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                     ))}
                 </tbody>
             </Table>
+            <div>
             <Button onClick={handleSubmit} className="submit-button">Submit</Button>
+            <Button variant="secondary" onClick={handleRest} className="rest-button">Reset</Button>
+            </div>
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Result</Modal.Title>
