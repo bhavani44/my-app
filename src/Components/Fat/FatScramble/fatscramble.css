@@ -17,7 +17,13 @@
   
   .submit-button {
     margin-top: 20px;
-    width: 20em;
+    width: 10em;
+    margin-right: 1.5em;
+  }
+  .rest-button{
+    margin-top: 20px;
+    width: 10em;
+    margin-left: 1.5em;
   }
   .scramble-word {
     color: #14a44d;

@@ -8,6 +8,7 @@ function FatScrambleItem({ scrambleWords }) {
     const [results, setResults] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState('');
+    const inputs = useRef([]);
 
     const handleCheck = (index, userInput) => {
         const newResults = [...results];
@@ -26,6 +27,7 @@ function FatScrambleItem({ scrambleWords }) {
     const handleKeyPress = (event, index, userInput) => {
         if (event.key === 'Enter') {
             handleCheck(index, userInput.toUpperCase());
+            inputs.current[index + 1].focus();
         }
     };
 
@@ -45,6 +47,13 @@ function FatScrambleItem({ scrambleWords }) {
         setShowModal(true);
     }
     };
+    
+    const handleRest = (e) => {
+        e.preventDefault();
+        setResults([]);
+        const inputs = Array.from(document.getElementsByTagName("input"));
+    inputs.forEach(input => input.value = '');
+    }
 
     const handleClose = () => {
         setShowModal(false);
@@ -67,6 +76,7 @@ function FatScrambleItem({ scrambleWords }) {
                                 <Row>
                                     <Col md={8}>
                                         <Form.Control
+                                        ref={input => inputs.current[index] = input}
                                             className='input-styling'
                                             type="text"
                                             placeholder='Enter Unscrambled word'
@@ -98,7 +108,10 @@ function FatScrambleItem({ scrambleWords }) {
                     ))}
                 </tbody>
             </Table>
+            <div>
             <Button onClick={handleSubmit} className="submit-button">Submit</Button>
+            <Button variant="secondary" onClick={handleRest} className="rest-button">Reset</Button>
+            </div>
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Result</Modal.Title>

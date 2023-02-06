@@ -1,64 +1,71 @@
 import React, { useState } from 'react'
 import FatScrambleItem from './FatScrambleItem'
 import "./fatscramble.css"
-import ShortNotes from './ShortNotes'
 
 const scrambledWords = [
   {
     sId:(new Date()).getTime,
     scramble_id:1,
-    scrambled_word:'IPSNCAH',
-    correct_word:'SPINACH',
-    scramble_message:"spinach text will be added here.",
-    scramble_url:"spinach url"
+    scrambled_word:'OCHTOCLAE',
+    correct_word:'CHOCOLATE',
+    scramble_message:"chocolate text will be added here.",
+    scramble_url:"chocolate url"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:2,
-    scrambled_word:'ACBEBAG',
-    correct_word:'CABBAGE',
-    scramble_message:"cabbage text will be added here.",
-    scramble_url:"cabbage url"
+    scrambled_word:'PVAASNATI',
+    correct_word:'VANASPATI',
+    scramble_message:"vanaspati text will be added here.",
+    scramble_url:"vanaspati url"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:3,
-    scrambled_word:'CREI',
-    correct_word:'RICE',
-    scramble_message:"rice text will be added here.",
-    scramble_url:"rice url"
+    scrambled_word:'UGROUNDNT',
+    correct_word:'GROUNDNUT',
+    scramble_message:"groundnut text will be added here.",
+    scramble_url:"groundnut url"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:4,
-    scrambled_word:'TWAEH',
-    correct_word:'WHEAT',
-    scramble_message:"wheat text will be added here.",
-    scramble_url:"wheat url"
+    scrambled_word:'SULNFOE-WROIL',
+    correct_word:'SUNFLOWER-OIL',
+    scramble_message:"sunflower-oil text will be added here.",
+    scramble_url:"sunflower-oil url"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:5,
-    scrambled_word:'SFHI',
-    correct_word:'FISH',
-    scramble_message:"fish text will be added here.",
-    scramble_url:"fish url"
+    scrambled_word:'ARSTMUD',
+    correct_word:'MUSTARD',
+    scramble_message:"mustard text will be added here.",
+    scramble_url:"mustard url"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:6,
-    scrambled_word:'OPPRCNO',
-    correct_word:'POPCORN',
-    scramble_message:"popcorn text will be added here.",
-    scramble_url:"popcorn url"
+    scrambled_word:'TBUETR',
+    correct_word:'BUTTER',
+    scramble_message:"butter text will be added here.",
+    scramble_url:"butter url"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:7,
-    scrambled_word:'ZPAIZ',
-    correct_word:'PIZZA',
-    scramble_message:"pizza text will be added here.",
-    scramble_url:"pizza url"
+    scrambled_word:'YTRILCGEDRIE',
+    correct_word:'TRIGLYCERIDE',
+    scramble_message:"triglyceride text will be added here.",
+    scramble_url:"triglyceride url"
+  },
+  {
+    sId:(new Date()).getTime,
+    scramble_id:8,
+    scrambled_word:'GEHE',
+    correct_word:'GHEE',
+    scramble_message:"ghee text will be added here.",
+    scramble_url:"ghee url"
   }
 ]
 
@@ -68,7 +75,6 @@ function FatScramble() {
   return (
     <>
       <FatScrambleItem scrambleWords={scrambledWords}/>
-      {/* <ShortNotes/> */}
     </>
   )
 }

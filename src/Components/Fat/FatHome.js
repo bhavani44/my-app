@@ -82,7 +82,7 @@ function FatHome() {
                     <div className='mt-4 p-4 rounded bg-success text-white' style={{minHeight:"35vh"}}>
                         <h1>Scramble</h1>
                         <p>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
-                        <button className="food-health-nutrion-item-button" onClick={() => { navigate('/foodhealthscramble')}}>Play</button>
+                        <button className="food-health-nutrion-item-button" onClick={() => { navigate('/fatscramble')}}>Play</button>
                     </div>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>

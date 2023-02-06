@@ -15,6 +15,7 @@ import MineralsHome from './Components/Minerals/MineralsHome';
 import {FoodHealthCrossWordComponent, CarbohydrateCrossWordComponent,FatCrossWordComponent, ProteinCrossWordComponent, VitaminCrossWordComponent, MineralsCrossWordComponent} from './Components/CrosswordGame/CrossWord';
 import FoodHealthWordSearch from './Components/FoodHealthNutriton/WordSearch/WordSearch';
 import FoodHealthScramble from './Components/FoodHealthNutriton/FoodHealthScramble/FoodHealthScramble';
+import FatScramble from './Components/Fat/FatScramble/FatScramble';
 // import FoodHealthScramble from './Components/FoodHealthNutriton/FoodHealthScramble/FoodHealthScramble';
 
 
@@ -41,6 +42,7 @@ function App() {
       <Route path="/mineralscrossword" element={<MineralsCrossWordComponent />} />
       <Route path="/foodhealthwordsearch" element={<FoodHealthWordSearch />} />
       <Route path="/foodhealthscramble" element={<FoodHealthScramble />} />
+      <Route path="/fatscramble" element={<FatScramble />} />
     </Routes>
     <Footer />
     </>
