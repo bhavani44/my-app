@@ -61,7 +61,7 @@ function FatHome() {
                         <div className='mt-4 p-4 rounded bg-info text-white' style={{minHeight:"35vh"}}>
                             <h1>Crossword</h1>
                             <p>Fill-in-the-blank by selecting a clue, thinking up possible answers to the clue, selecting an answer from among the possible ones, and entering the answer in the grid.</p>
-                            <button className="food-health-nutrion-item-button" onClick={() => { navigate('/foodhealthcrossword')}}>Play</button>
+                            <button className="food-health-nutrion-item-button" onClick={() => { navigate('/fatcrossword')}}>Play</button>
                         </div>
                     </Col>
                 </Row>

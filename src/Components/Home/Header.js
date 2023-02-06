@@ -11,23 +11,31 @@ function Header() {
             <img
               alt=""
               src={require('../Images/NIN logo 2.jpg')}
-              width="200rem"
-              height="60rem"
+              width="300rem"
+              height="80rem"
               className="d-sm-inline-block d-none"
             />{' '}
-            Nutrition Games
+          </Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img
+              alt=""
+              src={require('../Images/NUTRITION.png')}
+              width="250rem"
+              height="75rem"
+              className="d-sm-inline-block d-none"
+            />{' '}
           </Navbar.Brand>
       </Navbar>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" >
+          <Nav defaultActiveKey="/home" className="ms-auto" >
           <Link className="text-decoration-none" to='/'><Nav.Link href="#home">Home</Nav.Link></Link>
-                 <Link className="text-decoration-none" to='/FoodHealthHome'><Nav.Link href="#features">Food Health & Nutrition</Nav.Link></Link> 
-                 <Link className="text-decoration-none" to='/Carbohydrate'><Nav.Link href="#pricing">Carbohydrate</Nav.Link></Link>
-                 <Link className="text-decoration-none" to='/Fat'><Nav.Link href="#pricing">Fat</Nav.Link></Link>  
-                 <Link className="text-decoration-none" to='/Protein'><Nav.Link href="#pricing">Protein</Nav.Link></Link> 
-                 <Link className="text-decoration-none" to='/Vitamin'><Nav.Link href="#pricing">Vitamin</Nav.Link></Link> 
-                 <Link className="text-decoration-none" to='/Minerals'><Nav.Link href="#pricing">Minerals</Nav.Link></Link>
+          <Link className="text-decoration-none" to='/FoodHealthHome'><Nav.Link href="/FoodHealthHome">Food Health & Nutrition</Nav.Link></Link>
+          <Link className="text-decoration-none" to='/Carbohydrate'><Nav.Link href="/Carbohydrate">Carbohydrate</Nav.Link></Link>
+          <Link className="text-decoration-none" to='/Fat'><Nav.Link href="/Fat">Fat</Nav.Link></Link> 
+          <Link className="text-decoration-none" to='/Protein'><Nav.Link href="/Protein">Protein</Nav.Link></Link> 
+          <Link className="text-decoration-none" to='/Vitamin'><Nav.Link href="/Vitamin">Vitamin</Nav.Link></Link>
+          <Link className="text-decoration-none" to='/Minerals'><Nav.Link href="/Minerals">Minerals</Nav.Link></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
