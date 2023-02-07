@@ -1,5 +1,4 @@
-import React from 'react'
-import './protein.css'
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';

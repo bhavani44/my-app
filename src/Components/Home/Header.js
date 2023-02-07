@@ -7,15 +7,6 @@ function Header() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src={require('../Images/NIN logo 2.jpg')}
-              width="300rem"
-              height="80rem"
-              className="d-sm-inline-block d-none"
-            />{' '}
-          </Navbar.Brand>
           <Navbar.Brand href="#home">
             <img
               alt=""

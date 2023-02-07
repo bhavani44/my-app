@@ -1,4 +1,5 @@
 import React from 'react'
+import './foodnutritionhome.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
@@ -16,7 +17,7 @@ function FoodHealthHome() {
                         <div className='mt-4 p-5 rounded bg-warning text-white' style={{ height: "35vh" }}>
                             <Container>
                                 <h1 style={{ fontSize: "2rem"}} className='text-center'>Nutrition Information</h1>
-                                <p style={{ fontSize: "0.8vw"}} className='text-center'></p>
+                                <p style={{ fontSize: "1rem"}} className='text-center'></p>
                             </Container>
                         </div>
                     </Col>
@@ -26,8 +27,8 @@ function FoodHealthHome() {
                     <Col style={{ height: "35vh"}} xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className='mt-4 p-4 rounded bg-info text-white' style={{ height: "35vh" }}>
                             <h1 style={{ fontSize: "2rem"}}>Crossword</h1>
-                            <p style={{ fontSize: "0.9rem"}}>Fill-in-the-blank by selecting a clue, thinking up possible answers to the clue, selecting an answer from among the possible ones, and entering the answer in the grid.</p>
-                            <Button className="d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthcrossword') }}>Play</Button>
+                            <p style={{ fontSize: "1rem"}}>Fill-in-the-blank by selecting a clue, thinking up possible answers to the clue, selecting an answer from among the possible ones, and entering the answer in the grid.</p>
+                            <Button className="food-health-nutrion-item-button d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthcrossword') }}>Play</Button>
                         </div>
                     </Col>
                     {/* <Col xs={12} sm={12} md={12} lg={6} xl={6} className="d-flex justify-content-center">
@@ -49,8 +50,8 @@ function FoodHealthHome() {
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className='mt-4 p-4 rounded bg-success text-white' style={{ height: "35vh" }}>
                             <h1 style={{ fontSize: "2rem"}}>Wordsearch</h1>
-                            <p style={{ fontSize: "0.9rem"}}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
-                            <Button className="d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthwordsearch') }}>Play</Button>
+                            <p style={{ fontSize: "1rem"}}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
+                            <Button className="food-health-nutrion-item-button d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthwordsearch') }}>Play</Button>
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
@@ -59,8 +60,8 @@ function FoodHealthHome() {
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className='mt-4 p-4 rounded bg-secondary text-white' style={{ height: "35vh" }}>
                             <h1 style={{ fontSize: "2rem"}}>Scramble</h1>
-                            <p style={{ fontSize: "0.9rem"}}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
-                            <Button className="d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthscramble') }}>Play</Button>
+                            <p style={{ fontSize: "1rem"}}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
+                            <Button className="food-health-nutrion-item-button d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthscramble') }}>Play</Button>
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>

@@ -1,6 +1,5 @@
 import React from 'react'
-import FatItem from './FatItem'
-import './fat.css'
+import FatItem from './FatItem';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
