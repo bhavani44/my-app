@@ -58,7 +58,7 @@ function FoodHealthScrambleItem({ scrambleWords }) {
         setShowModal(false);
     };
     return (
-        <Container className='div-center'>
+        <Container className='div-center mb-5'>
             <Table borderless striped hover className='table-center'>
                 <thead>
                     {/* <tr>
