@@ -16,6 +16,7 @@ import {FoodHealthCrossWordComponent, CarbohydrateCrossWordComponent,FatCrossWor
 import FoodHealthWordSearch from './Components/FoodHealthNutriton/WordSearch/WordSearch';
 import FoodHealthScramble from './Components/FoodHealthNutriton/FoodHealthScramble/FoodHealthScramble';
 import FatScramble from './Components/Fat/FatScramble/FatScramble';
+import CarbohydrateScramble from './Components/Carbohydrate/CarbohydrateScramble/CarbohydrateScramble';
 // import FoodHealthScramble from './Components/FoodHealthNutriton/FoodHealthScramble/FoodHealthScramble';
 
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/foodhealthwordsearch" element={<FoodHealthWordSearch />} />
       <Route path="/foodhealthscramble" element={<FoodHealthScramble />} />
       <Route path="/fatscramble" element={<FatScramble />} />
+      <Route path="/carbohydratescramble" element={<CarbohydrateScramble />} />
     </Routes>
     <Footer />
     </>

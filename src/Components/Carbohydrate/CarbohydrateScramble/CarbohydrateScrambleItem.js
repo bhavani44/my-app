@@ -8,6 +8,7 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
     const [results, setResults] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState('');
+    const inputs = useRef([]);
 
     const handleCheck = (index, userInput) => {
         const newResults = [...results];
@@ -26,6 +27,7 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
     const handleKeyPress = (event, index, userInput) => {
         if (event.key === 'Enter') {
             handleCheck(index, userInput.toUpperCase());
+            inputs.current[index + 1].focus();
         }
     };
 
@@ -46,11 +48,17 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
     }
     };
 
+    const handleRest = (e) => {
+        e.preventDefault();
+        setResults([]);
+        const inputs = Array.from(document.getElementsByTagName("input"));
+    inputs.forEach(input => input.value = '');
+    }
     const handleClose = () => {
         setShowModal(false);
     };
     return (
-        <Container className='div-center'>
+        <Container className='div-center mb-5'>
             <Table borderless striped hover className='table-center'>
                 <thead>
                     {/* <tr>
@@ -67,6 +75,7 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
                                 <Row>
                                     <Col md={8}>
                                         <Form.Control
+                                        ref={input => inputs.current[index] = input}
                                             className='input-styling'
                                             type="text"
                                             placeholder='Enter Unscrambled word'
@@ -98,7 +107,10 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
                     ))}
                 </tbody>
             </Table>
+            <div>
             <Button onClick={handleSubmit} className="submit-button">Submit</Button>
+            <Button variant="secondary" onClick={handleRest} className="rest-button">Reset</Button>
+            </div>
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Result</Modal.Title>

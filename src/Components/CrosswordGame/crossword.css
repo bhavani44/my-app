@@ -1,10 +1,12 @@
 .crossword-container {
-    width: 50%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     margin: auto;
     padding: inherit;
     text-align: justify;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     /* position: absolute;
     left: 50%;
     top: 65%;

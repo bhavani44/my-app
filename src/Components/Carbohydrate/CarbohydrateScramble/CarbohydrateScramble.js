@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./carbohydratescramble.css"
 import CarbohydrateScrambleItem from './CarbohydrateScrambleItem'
-import ShortNotes from './ShortNotes'
+// import ShortNotes from './ShortNotes'
 
 const scrambledWords = [
   {
