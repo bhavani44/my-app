@@ -13,7 +13,7 @@ function HomePageItem({ data }) {
             <Container >
                 <Row>
                     {
-                        (!data) ? "Not Found" : data.map(item => {
+                        (!data) ? "Not Found" : data.map((item,index) => {
 
                             return (
                                 <>
@@ -21,7 +21,7 @@ function HomePageItem({ data }) {
                                         <div className="image-flip">
                                             <div className='mainflip flip-0'>
                                                 <div className='frontside'>
-                                                    <div className='card' key={item.id} >
+                                                    <div className='card' key={index} >
                                                         <div className='card-body text-center'>
                                                             <img className="home-page-img img-fluid" src={item.imgUrl} alt="" />
                                                             <h4 className='card-title'>{item.name}</h4>

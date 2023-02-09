@@ -10,7 +10,7 @@ const scrambledWords = [
     scrambled_word:'IPSNCAH',
     correct_word:'SPINACH',
     scramble_message:"A dark green leafy vegetabel rich in vitamins like Folate, vit-C, vit-K, Carotenes, Calcium and Dietary Fibre, also known for its Antioxidant and anti cancer properties.",
-    scramble_url:"spinach url"
+    scramble_url:'spinach.png'
   },
   {
     sId:(new Date()).getTime,
@@ -18,7 +18,7 @@ const scrambledWords = [
     scrambled_word:'ACBEBAG',
     correct_word:'CABBAGE',
     scramble_message:"cabbage text will be added here.",
-    scramble_url:"cabbage url"
+    scramble_url:"cabbage.png"
   },
   {
     sId:(new Date()).getTime,
@@ -26,7 +26,7 @@ const scrambledWords = [
     scrambled_word:'CREI',
     correct_word:'RICE',
     scramble_message:"rice text will be added here.",
-    scramble_url:"rice url"
+    scramble_url:"rice.png"
   },
   {
     sId:(new Date()).getTime,
@@ -34,7 +34,7 @@ const scrambledWords = [
     scrambled_word:'TWAEH',
     correct_word:'WHEAT',
     scramble_message:"wheat text will be added here.",
-    scramble_url:"wheat url"
+    scramble_url:"wheat.png"
   },
   {
     sId:(new Date()).getTime,
@@ -42,7 +42,7 @@ const scrambledWords = [
     scrambled_word:'SFHI',
     correct_word:'FISH',
     scramble_message:"fish text will be added here.",
-    scramble_url:"fish url"
+    scramble_url:"fish.png"
   },
   {
     sId:(new Date()).getTime,
@@ -50,7 +50,7 @@ const scrambledWords = [
     scrambled_word:'OPPRCNO',
     correct_word:'POPCORN',
     scramble_message:"popcorn text will be added here.",
-    scramble_url:"popcorn url"
+    scramble_url:"popcorn.png"
   },
   {
     sId:(new Date()).getTime,
@@ -58,7 +58,7 @@ const scrambledWords = [
     scrambled_word:'ZPAIZ',
     correct_word:'PIZZA',
     scramble_message:"pizza text will be added here.",
-    scramble_url:"pizza url"
+    scramble_url:"pizza.png"
   }
 ]
 

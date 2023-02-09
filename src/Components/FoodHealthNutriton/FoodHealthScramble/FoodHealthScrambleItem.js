@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
-import { Table, Button, Form, Modal, Container, Row, Col } from "react-bootstrap";
+import { Table, Button, Form, Modal, Container, Row, Col, NavLink } from "react-bootstrap";
 
 
 
@@ -8,6 +8,7 @@ function FoodHealthScrambleItem({ scrambleWords }) {
     const [results, setResults] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState('');
+    const [iconModalShow, setIconModalShow] = React.useState(false);
     const inputs = useRef([]);
 
     const handleCheck = (index, userInput) => {
@@ -16,7 +17,7 @@ function FoodHealthScrambleItem({ scrambleWords }) {
             newResults[index] = {
                 result: 'correct',
                 scramble_message: scrambleWords[index].scramble_message,
-                scramble_icon: scrambleWords[index].scramble_icon,
+                scramble_url: scrambleWords[index].scramble_url,
             };
         } else {
             newResults[index] = { result: 'incorrect' };
@@ -72,40 +73,42 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                         <tr key={word.scramble_id}>
                             <td className='scramble-word'>{word.scrambled_word}</td>
                             <td>
-                            <Container>
-                                <Row>
-                                    <Col md={8}>
-                                        <Form.Control
-                                            ref={input => inputs.current[index] = input}
-                                            className='input-styling'
-                                            type="text"
-                                            placeholder='Enter Unscrambled word'
-                                            onKeyPress={e => handleKeyPress(e, index, e.target.value)}
-                                        />
-                                    </Col>
-                                    <Col md={4}>
-                                        <Button onClick={() => handleCheck(index, document.getElementsByTagName("input")[index].value)}>
-                                            Check
-                                        </Button>
-                                    </Col>
-                                </Row>
+                                <Container>
+                                    <Row>
+                                        <Col md={8}>
+                                            <Form.Control
+                                                ref={input => inputs.current[index] = input}
+                                                className='input-styling'
+                                                type="text"
+                                                placeholder='Enter Unscrambled word'
+                                                onKeyPress={e => handleKeyPress(e, index, e.target.value)}
+                                            />
+                                        </Col>
+                                        <Col md={4}>
+                                            <Button onClick={() => handleCheck(index, document.getElementsByTagName("input")[index].value)}>
+                                                Check
+                                            </Button>
+                                        </Col>
+                                    </Row>
                                 </Container>
                             </td>
                             <td>
                                 {results[index] ? (
                                     results[index].result === 'correct' ? (
                                         <Container>
-                                        <Row>
-                                            <Col style={{ color: 'green', fontSize: '1.5em', fontWeight: 'bold' }}>Correct</Col>
-                                            <Col>
-                                            <img src={require('../../Images/spinach.png')}
-                                                width="100rem"
-                                                height="65rem"
-                                            />
-                                            </Col>
-                                            <Col>{results[index].scramble_message}</Col>
-                                            
-                                            </Row>   
+                                            <Row>
+                                                <Col style={{ color: 'green', fontSize: '1.5em', fontWeight: 'bold' }}>Correct</Col>
+                                                <Col>
+                                                    <img src={require(`../../Images/${results[index].scramble_url}`)}
+                                                        alt=""
+                                                        width="100rem"
+                                                        height="65rem"
+                                                    />
+                                                </Col>
+                                                <Col>{results[index].scramble_message}</Col>
+
+
+                                            </Row>
                                         </Container>
                                     ) : (
                                         <span style={{ color: 'red', fontSize: '1.5em', fontWeight: 'bold' }}>Incorrect</span>)
