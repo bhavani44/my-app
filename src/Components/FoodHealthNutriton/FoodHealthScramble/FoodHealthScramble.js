@@ -9,7 +9,7 @@ const scrambledWords = [
     scramble_id:1,
     scrambled_word:'IPSNCAH',
     correct_word:'SPINACH',
-    scramble_message:"spinach text will be added here.",
+    scramble_message:"A dark green leafy vegetabel rich in vitamins like Folate, vit-C, vit-K, Carotenes, Calcium and Dietary Fibre, also known for its Antioxidant and anti cancer properties.",
     scramble_url:"spinach url"
   },
   {

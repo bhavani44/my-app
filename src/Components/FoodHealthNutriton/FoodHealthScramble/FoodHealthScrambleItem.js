@@ -33,26 +33,26 @@ function FoodHealthScrambleItem({ scrambleWords }) {
 
     const handleSubmit = () => {
         const inputs = Array.from(document.getElementsByTagName("input"));
-    const userInputs = inputs.map(input => input.value);
-    const isCorrect = results.every(result => result.result === 'correct');
-    if (!userInputs.includes("")) {
-        if (isCorrect) {
-            setModalText('Congratulations, you have successfully completed the game. Click OK to proceed to the next game.');
+        const userInputs = inputs.map(input => input.value);
+        const isCorrect = results.every(result => result.result === 'correct');
+        if (!userInputs.includes("")) {
+            if (isCorrect) {
+                setModalText('Congratulations, you have successfully completed the game. Click OK to proceed to the next game.');
+            } else {
+                setModalText('Correct all the words to proceed to the next game.');
+            }
+            setShowModal(true);
         } else {
-            setModalText('Correct all the words to proceed to the next game.');
+            setModalText('Fill in all the words to proceed to the next game.');
+            setShowModal(true);
         }
-        setShowModal(true);
-    } else {
-        setModalText('Fill in all the words to proceed to the next game.');
-        setShowModal(true);
-    }
     };
 
     const handleRest = (e) => {
         e.preventDefault();
         setResults([]);
         const inputs = Array.from(document.getElementsByTagName("input"));
-    inputs.forEach(input => input.value = '');
+        inputs.forEach(input => input.value = '');
     }
     const handleClose = () => {
         setShowModal(false);
@@ -72,10 +72,11 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                         <tr key={word.scramble_id}>
                             <td className='scramble-word'>{word.scrambled_word}</td>
                             <td>
+                            <Container>
                                 <Row>
                                     <Col md={8}>
                                         <Form.Control
-                                        ref={input => inputs.current[index] = input}
+                                            ref={input => inputs.current[index] = input}
                                             className='input-styling'
                                             type="text"
                                             placeholder='Enter Unscrambled word'
@@ -88,19 +89,26 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                                         </Button>
                                     </Col>
                                 </Row>
+                                </Container>
                             </td>
                             <td>
                                 {results[index] ? (
                                     results[index].result === 'correct' ? (
-                                        <>
-                                            <span style={{ color: 'green', fontSize:'1.5em', fontWeight:'bold' }}>Correct</span>
-                                            <br />
-                                            <span>{results[index].scramble_message}</span>
-                                            <br />
-                                            <img src={results[index].scramble_icon} alt={results[index].scramble_message} />
-                                        </>
+                                        <Container>
+                                        <Row>
+                                            <Col style={{ color: 'green', fontSize: '1.5em', fontWeight: 'bold' }}>Correct</Col>
+                                            <Col>
+                                            <img src={require('../../Images/spinach.png')}
+                                                width="100rem"
+                                                height="65rem"
+                                            />
+                                            </Col>
+                                            <Col>{results[index].scramble_message}</Col>
+                                            
+                                            </Row>   
+                                        </Container>
                                     ) : (
-                                        <span style={{ color: 'red', fontSize:'1.5em', fontWeight:'bold' }}>Incorrect</span>)
+                                        <span style={{ color: 'red', fontSize: '1.5em', fontWeight: 'bold' }}>Incorrect</span>)
                                 ) : null}
                             </td>
                         </tr>
@@ -108,8 +116,8 @@ function FoodHealthScrambleItem({ scrambleWords }) {
                 </tbody>
             </Table>
             <div>
-            <Button onClick={handleSubmit} className="submit-button">Submit</Button>
-            <Button variant="secondary" onClick={handleRest} className="rest-button">Reset</Button>
+                <Button onClick={handleSubmit} className="submit-button">Submit</Button>
+                <Button variant="secondary" onClick={handleRest} className="rest-button">Reset</Button>
             </div>
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
