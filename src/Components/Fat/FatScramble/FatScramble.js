@@ -9,7 +9,7 @@ const scrambledWords = [
     scrambled_word:'OCHTOCLAE',
     correct_word:'CHOCOLATE',
     scramble_message:"chocolate text will be added here.",
-    scramble_url:"chocolate url"
+    scramble_url:"chocolate-bar.png"
   },
   {
     sId:(new Date()).getTime,
@@ -17,7 +17,7 @@ const scrambledWords = [
     scrambled_word:'PVAASNATI',
     correct_word:'VANASPATI',
     scramble_message:"vanaspati text will be added here.",
-    scramble_url:"vanaspati url"
+    scramble_url:"frying-pan.png"
   },
   {
     sId:(new Date()).getTime,
@@ -25,7 +25,7 @@ const scrambledWords = [
     scrambled_word:'UGROUNDNT',
     correct_word:'GROUNDNUT',
     scramble_message:"groundnut text will be added here.",
-    scramble_url:"groundnut url"
+    scramble_url:""
   },
   {
     sId:(new Date()).getTime,
@@ -41,7 +41,7 @@ const scrambledWords = [
     scrambled_word:'ARSTMUD',
     correct_word:'MUSTARD',
     scramble_message:"mustard text will be added here.",
-    scramble_url:"mustard url"
+    scramble_url:"mustard.png"
   },
   {
     sId:(new Date()).getTime,
@@ -49,7 +49,7 @@ const scrambledWords = [
     scrambled_word:'TBUETR',
     correct_word:'BUTTER',
     scramble_message:"butter text will be added here.",
-    scramble_url:"butter url"
+    scramble_url:"butter.png"
   },
   {
     sId:(new Date()).getTime,
@@ -57,7 +57,7 @@ const scrambledWords = [
     scrambled_word:'YTRILCGEDRIE',
     correct_word:'TRIGLYCERIDE',
     scramble_message:"triglyceride text will be added here.",
-    scramble_url:"triglyceride url"
+    scramble_url:"triglycerides.png"
   },
   {
     sId:(new Date()).getTime,
@@ -65,7 +65,7 @@ const scrambledWords = [
     scrambled_word:'GEHE',
     correct_word:'GHEE',
     scramble_message:"ghee text will be added here.",
-    scramble_url:"ghee url"
+    scramble_url:"ghee.png"
   }
 ]
 
