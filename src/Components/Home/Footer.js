@@ -15,7 +15,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} sm={6} md={6} lg={6} xl={6} className="text-center text-sm-right">
             <p className="text-white mb-0">
-              &copy; {new Date().getFullYear()} Company Name. All rights reserved.
+              &copy; {new Date().getFullYear()} Developed by NICHE division NIN. All rights reserved.
             </p>
           </Col>
         </Row>

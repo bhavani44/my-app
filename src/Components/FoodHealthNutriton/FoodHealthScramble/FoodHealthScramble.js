@@ -17,7 +17,7 @@ const scrambledWords = [
     scramble_id:2,
     scrambled_word:'ACBEBAG',
     correct_word:'CABBAGE',
-    scramble_message:"cabbage text will be added here.",
+    scramble_message:"A cruciferous vegetable rich in vit-C, vit- K and beneficial phytochemicals like glucosinolates, tocopherol, leads to a lower cancer risk and a stronger immunity.",
     scramble_url:"cabbage.png"
   },
   {
@@ -25,7 +25,7 @@ const scrambledWords = [
     scramble_id:3,
     scrambled_word:'CREI',
     correct_word:'RICE',
-    scramble_message:"rice text will be added here.",
+    scramble_message:"A staple cereal providing major source of carbohydrates in the diet, however white rice lacks essential vitamins, minerals and dietary fibre due to the milling process.",
     scramble_url:"rice.png"
   },
   {
@@ -33,7 +33,7 @@ const scrambledWords = [
     scramble_id:4,
     scrambled_word:'TWAEH',
     correct_word:'WHEAT',
-    scramble_message:"wheat text will be added here.",
+    scramble_message:"A staple cereal used mostly for making chapatis, wholewheat is a source of major carbohydrates, protein as well as essential health components like b complex vitamins and dietary fibre.",
     scramble_url:"wheat.png"
   },
   {
@@ -41,7 +41,7 @@ const scrambledWords = [
     scramble_id:5,
     scrambled_word:'SFHI',
     correct_word:'FISH',
-    scramble_message:"fish text will be added here.",
+    scramble_message:"Excellent source of high-quality protein, Omega 3 fats and vitamins like B12.",
     scramble_url:"fish.png"
   },
   {
@@ -49,7 +49,7 @@ const scrambledWords = [
     scramble_id:6,
     scrambled_word:'OPPRCNO',
     correct_word:'POPCORN',
-    scramble_message:"popcorn text will be added here.",
+    scramble_message:"A type of maize which is air-popped and is a great example of healthy snack provided it is not loaded with butter and excess calories like you get at the cinemas.",
     scramble_url:"popcorn.png"
   },
   {
@@ -57,7 +57,7 @@ const scrambledWords = [
     scramble_id:7,
     scrambled_word:'ZPAIZ',
     correct_word:'PIZZA',
-    scramble_message:"pizza text will be added here.",
+    scramble_message:"A junk food of Italian origin, contains refined flour and high amounts of saturated fat and sodium-linked with obesity, diabetes and cardiovascular problems.",
     scramble_url:"pizza.png"
   }
 ]
