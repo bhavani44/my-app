@@ -7,58 +7,66 @@ const scrambledWords = [
   {
     sId:(new Date()).getTime,
     scramble_id:1,
-    scrambled_word:'IPSNCAH',
-    correct_word:'SPINACH',
-    scramble_message:"spinach text will be added here.",
-    scramble_url:"spinach url"
+    scrambled_word:'CUASEWHNT',
+    correct_word:'CASHEWNUT',
+    scramble_message:"cashewnut text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF.",
+    scramble_url:"cashew.png"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:2,
-    scrambled_word:'ACBEBAG',
-    correct_word:'CABBAGE',
-    scramble_message:"cabbage text will be added here.",
-    scramble_url:"cabbage url"
+    scrambled_word:'GJAYGER',
+    correct_word:'JAGGERY',
+    scramble_message:"jaggery text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"jaggery.png"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:3,
-    scrambled_word:'CREI',
-    correct_word:'RICE',
-    scramble_message:"rice text will be added here.",
-    scramble_url:"rice url"
+    scrambled_word:'OFRLU',
+    correct_word:'FLOUR',
+    scramble_message:"flour text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"flour.png"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:4,
-    scrambled_word:'TWAEH',
-    correct_word:'WHEAT',
-    scramble_message:"wheat text will be added here.",
-    scramble_url:"wheat url"
+    scrambled_word:'ASRGU',
+    correct_word:'SUGAR',
+    scramble_message:"sugar text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"sugar.png"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:5,
-    scrambled_word:'SFHI',
-    correct_word:'FISH',
-    scramble_message:"fish text will be added here.",
-    scramble_url:"fish url"
+    scrambled_word:'NCEDISA',
+    correct_word:'CANDIES',
+    scramble_message:"candies text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"sweets.png"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:6,
-    scrambled_word:'OPPRCNO',
-    correct_word:'POPCORN',
-    scramble_message:"popcorn text will be added here.",
-    scramble_url:"popcorn url"
+    scrambled_word:'OPTOAT',
+    correct_word:'POTATO',
+    scramble_message:"potato text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"potato.png"
   },
   {
     sId:(new Date()).getTime,
     scramble_id:7,
-    scrambled_word:'ZPAIZ',
-    correct_word:'PIZZA',
-    scramble_message:"pizza text will be added here.",
-    scramble_url:"pizza url"
+    scrambled_word:'UBSITCI',
+    correct_word:'BISCUIT',
+    scramble_message:"biscuit text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"biscuit.png"
+  },
+  {
+    sId:(new Date()).getTime,
+    scramble_id:8,
+    scrambled_word:'KMNI',
+    correct_word:'MILK',
+    scramble_message:"milk text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
+    scramble_url:"milk.png"
   }
 ]
 

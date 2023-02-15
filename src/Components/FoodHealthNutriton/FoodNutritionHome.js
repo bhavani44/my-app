@@ -19,11 +19,10 @@ function FoodHealthHome() {
                 <Row>
                     <Col xs={12} sm={12} md={12} lg={6} xl={6}>
                         <div className='mt-4 p-5 rounded bg-warning text-white' style={{ height: "35vh" }}>
-                                <h1 style={{ fontSize: "2rem"}} className='text-center'>Carbohydrates</h1>
+                                <h1 style={{ fontSize: "2rem"}} className='text-center'>Food Health & Nutriton</h1>
                                 <p style={{ fontSize: "1rem"}} className='text-center'>
-                                    These are one of the 3 main nutrients found in all foods and beverages. These are organic compounds containing carbon, hydrogen and oxygen.
-                                    Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
-                                    Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
+                                    Food may be defined as anything solid or liquid which, when held in the mouth is swallowed, digested, absorbed & assimilated, keeps body well.<br/>
+                                    Nutrition is the combination of the process by which we utilize food. Nutrition science is the area of knowledge regarding the role of food in the maintenance of health.
                                 </p>
                                 <div className='text-center'>
                                 <Button variant="link" onClick={handleShow}>
@@ -33,14 +32,14 @@ function FoodHealthHome() {
                                 <Modal aria-labelledby="contained-modal-title-vcenter"
       centered show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal Title</Modal.Title>
+          <Modal.Title>Food Health & Nutriton</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           Modal content goes here. You can add any information you want to display.
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Got It
           </Button>
         </Modal.Footer>
       </Modal>

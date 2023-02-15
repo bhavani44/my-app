@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { Table, Button, Form, Modal, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
 
 
-function CarbohydrateScrambleItem({ scrambleWords }) {
+function FoodHealthScrambleItem({ scrambleWords }) {
+    let navigate = useNavigate();
     const [results, setResults] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [modalText, setModalText] = useState('');
+    const [iconModalShow, setIconModalShow] = React.useState(false);
     const inputs = useRef([]);
 
     const handleCheck = (index, userInput) => {
@@ -16,7 +19,7 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
             newResults[index] = {
                 result: 'correct',
                 scramble_message: scrambleWords[index].scramble_message,
-                scramble_icon: scrambleWords[index].scramble_icon,
+                scramble_url: scrambleWords[index].scramble_url,
             };
         } else {
             newResults[index] = { result: 'incorrect' };
@@ -33,33 +36,36 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
 
     const handleSubmit = () => {
         const inputs = Array.from(document.getElementsByTagName("input"));
-    const userInputs = inputs.map(input => input.value);
-    const isCorrect = results.every(result => result.result === 'correct');
-    if (!userInputs.includes("")) {
-        if (isCorrect) {
-            setModalText('Congratulations, you have successfully completed the game. Click OK to proceed to the next game.');
+        const userInputs = inputs.map(input => input.value);
+        const isCorrect = results.every(result => result.result === 'correct');
+        if (!userInputs.includes("")) {
+            if (isCorrect) {
+                setModalText('Congratulations, you have successfully completed the game. Click OK to proceed to the next game.');
+            } else {
+                setModalText('Correct all the words to proceed to the next game.');
+            }
+            setShowModal(true);
         } else {
-            setModalText('Correct all the words to proceed to the next game.');
+            setModalText('Fill in all the words to proceed to the next game.');
+            setShowModal(true);
         }
-        setShowModal(true);
-    } else {
-        setModalText('Fill in all the words to proceed to the next game.');
-        setShowModal(true);
-    }
     };
 
     const handleRest = (e) => {
         e.preventDefault();
         setResults([]);
         const inputs = Array.from(document.getElementsByTagName("input"));
-    inputs.forEach(input => input.value = '');
+        inputs.forEach(input => input.value = '');
     }
     const handleClose = () => {
         setShowModal(false);
     };
+    const handleNext =() =>{
+        navigate('/foodhealthcrossword')
+    }
     return (
-        <Container className='div-center mb-5'>
-            <Table borderless striped hover className='table-center'>
+        <Container className='mb-5 mt-5 align-items-center'>
+            <Table borderless striped hover className='align-items-center'>
                 <thead>
                     {/* <tr>
                         <th>Scrambled Word</th>
@@ -70,46 +76,60 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
                 <tbody>
                     {scrambleWords.map((word, index) => (
                         <tr key={word.scramble_id}>
-                            <td className='scramble-word'>{word.scrambled_word}</td>
                             <td>
-                                <Row>
-                                    <Col md={8}>
-                                        <Form.Control
-                                        ref={input => inputs.current[index] = input}
-                                            className='input-styling'
-                                            type="text"
-                                            placeholder='Enter Unscrambled word'
-                                            onKeyPress={e => handleKeyPress(e, index, e.target.value)}
-                                        />
-                                    </Col>
-                                    <Col md={4}>
-                                        <Button onClick={() => handleCheck(index, document.getElementsByTagName("input")[index].value)}>
-                                            Check
-                                        </Button>
-                                    </Col>
-                                </Row>
+                                <Container className='align-items-center'>
+                                    <Row className='align-items-center'>
+                                        <Col sm={12} className='scramble-word'>{word.scrambled_word}</Col>
+                                    </Row>
+                                </Container>
+                            </td>
+                            <td>
+                                <Container>
+                                    <Row>
+                                        <Col sm={8}>
+                                            <Form.Control
+                                                ref={input => inputs.current[index] = input}
+                                                className='input-styling'
+                                                type="text"
+                                                placeholder='Enter Unscrambled word'
+                                                onKeyPress={e => handleKeyPress(e, index, e.target.value)}
+                                            />
+                                        </Col>
+                                        <Col sm={4}>
+                                            <Button className="" onClick={() => handleCheck(index, document.getElementsByTagName("input")[index].value)}>
+                                                Check
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </Container>
                             </td>
                             <td>
                                 {results[index] ? (
                                     results[index].result === 'correct' ? (
-                                        <>
-                                            <span style={{ color: 'green', fontSize:'1.5em', fontWeight:'bold' }}>Correct</span>
-                                            <br />
-                                            <span>{results[index].scramble_message}</span>
-                                            <br />
-                                            <img src={results[index].scramble_icon} alt={results[index].scramble_message} />
-                                        </>
+                                        <Container>
+                                            <Row className='align-items-center'>
+                                                <Col sm={2} style={{ color: 'green', fontSize: '1.5em', fontWeight: 'bold' }}>Correct</Col>
+                                                <Col sm={2}>
+                                                    <img src={require(`../../Images/${results[index].scramble_url}`)}
+                                                        alt=""
+                                                        width="100rem"
+                                                        height="65rem"
+                                                    />
+                                                </Col>
+                                                <Col sm={4}>{results[index].scramble_message}</Col>
+                                            </Row>
+                                        </Container>
                                     ) : (
-                                        <span style={{ color: 'red', fontSize:'1.5em', fontWeight:'bold' }}>Incorrect</span>)
+                                        <span style={{ color: 'red', fontSize: '1.5em', fontWeight: 'bold' }}>Incorrect</span>)
                                 ) : null}
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </Table>
-            <div>
-            <Button onClick={handleSubmit} className="submit-button">Submit</Button>
-            <Button variant="secondary" onClick={handleRest} className="rest-button">Reset</Button>
+            <div className='text-center'>
+                <Button onClick={handleSubmit} className="submit-button" >Submit</Button>
+                <Button variant="secondary" onClick={handleRest} className="submit-button">Reset</Button>
             </div>
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -120,13 +140,16 @@ function CarbohydrateScrambleItem({ scrambleWords }) {
                     <Button variant="secondary" onClick={handleClose}>
                         OK
                     </Button>
+                    <Button variant="warning" onClick={handleNext}>
+                        Proceed to next
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </Container>
     );
 };
 
-export default CarbohydrateScrambleItem;
+export default FoodHealthScrambleItem;
 
 
 

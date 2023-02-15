@@ -1,25 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './carbohydratehome.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import { useNavigate } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 
 function FoodHealthHome() {
     let navigate = useNavigate();
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
     return (
         <>
             <Container className='mt-4 mb-4'>
                 <Row>
-                    <Col xs={12} sm={12} md={12} lg={6} xl={6}>
+                <Col xs={12} sm={12} md={12} lg={6} xl={6}>
                         <div className='mt-4 p-5 rounded bg-warning text-white' style={{ height: "35vh" }}>
-                            <Container>
-                                <h1 style={{ fontSize: "2rem"}} className='text-center'>Nutrition Information</h1>
-                                <p style={{ fontSize: "1rem"}} className='text-center'></p>
-                            </Container>
+                                <h1 style={{ fontSize: "2rem"}} className='text-center'>Carbohydrate</h1>
+                                <p style={{ fontSize: "1rem"}} className='text-center'>
+                                    These are one of the 3 main nutrients found in all foods and beverages. These are organic compounds containing carbon, hydrogen and oxygen.
+                                    Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
+                                    Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
+                                </p>
+                                <div className='text-center'>
+                                <Button variant="link" onClick={handleShow}>
+          Know More
+        </Button>
+                                </div>
+                                <Modal aria-labelledby="contained-modal-title-vcenter"
+      centered show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Carbohydrate</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Modal content goes here. You can add any information you want to display.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Got It
+          </Button>
+        </Modal.Footer>
+      </Modal>
                         </div>
+                        
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
                         <img style={{ minHeight: "35vh" }} src="https://img.freepik.com/premium-photo/crossword-puzzle-pencil_488220-880.jpg?" alt="crossword" class="img-thumbnail img-fluid mt-4" />
