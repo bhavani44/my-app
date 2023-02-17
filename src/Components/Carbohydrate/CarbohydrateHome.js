@@ -10,50 +10,50 @@ function FoodHealthHome() {
     let navigate = useNavigate();
     const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <>
             <Container className='mt-4 mb-4'>
                 <Row>
-                <Col xs={12} sm={12} md={12} lg={6} xl={6}>
+                    <Col xs={12} sm={12} md={12} lg={6} xl={6}>
                         <div className='mt-4 p-5 rounded bg-warning text-white' style={{ height: "35vh" }}>
-                                <h1 style={{ fontSize: "2rem"}} className='text-center'>Carbohydrate</h1>
-                                <p style={{ fontSize: "1rem"}} className='text-center'>
-                                    These are one of the 3 main nutrients found in all foods and beverages. These are organic compounds containing carbon, hydrogen and oxygen.
-                                    Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
-                                    Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
-                                </p>
-                                <div className='text-center'>
+                            <h1 style={{ fontSize: "2rem" }} className='text-center'>Carbohydrate</h1>
+                            <p style={{ fontSize: "1rem" }} className='text-center'>
+                                These are one of the 3 main nutrients found in all foods and beverages. These are organic compounds containing carbon, hydrogen and oxygen.
+                                Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
+                                Carbohydrates can be classified into simple sugars (monosacchaides and disaccharides) and complex carbohydrates (polysaccharides like starch, and dietary fiber)
+                            </p>
+                            <div className='text-center'>
                                 <Button variant="link" onClick={handleShow}>
-          Know More
-        </Button>
-                                </div>
-                                <Modal aria-labelledby="contained-modal-title-vcenter"
-      centered show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Carbohydrate</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Modal content goes here. You can add any information you want to display.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Got It
-          </Button>
-        </Modal.Footer>
-      </Modal>
+                                    Know More
+                                </Button>
+                            </div>
+                            <Modal aria-labelledby="contained-modal-title-vcenter"
+                                centered show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Carbohydrate</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    Modal content goes here. You can add any information you want to display.
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Got It
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
                         </div>
-                        
+
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
                         <img style={{ minHeight: "35vh" }} src="https://img.freepik.com/premium-photo/crossword-puzzle-pencil_488220-880.jpg?" alt="crossword" class="img-thumbnail img-fluid mt-4" />
                     </Col>
-                    <Col style={{ height: "35vh"}} xs={12} sm={12} md={6} lg={3} xl={3}>
+                    <Col style={{ height: "35vh" }} xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className='mt-4 p-4 rounded bg-info text-white' style={{ height: "35vh" }}>
-                            <h1 style={{ fontSize: "2rem"}}>Crossword</h1>
-                            <p style={{ fontSize: "1rem"}}>Fill-in-the-blank by selecting a clue, thinking up possible answers to the clue, selecting an answer from among the possible ones, and entering the answer in the grid.</p>
+                            <h1 style={{ fontSize: "2rem" }}>Crossword</h1>
+                            <p style={{ fontSize: "1rem" }}>Fill-in-the-blank by selecting a clue, thinking up possible answers to the clue, selecting an answer from among the possible ones, and entering the answer in the grid.</p>
                             <Button className="food-health-nutrion-item-button d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/carbohydratecrossword') }}>Play</Button>
                         </div>
                     </Col>
@@ -63,8 +63,8 @@ function FoodHealthHome() {
                 <Row>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className='mt-4 p-4 rounded bg-success text-white' style={{ height: "35vh" }}>
-                            <h1 style={{ fontSize: "2rem"}}>Wordsearch</h1>
-                            <p style={{ fontSize: "1rem"}}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
+                            <h1 style={{ fontSize: "2rem" }}>Wordsearch</h1>
+                            <p style={{ fontSize: "1rem" }}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
                             <Button className="food-health-nutrion-item-button d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/foodhealthwordsearch') }}>Play</Button>
                         </div>
                     </Col>
@@ -73,8 +73,8 @@ function FoodHealthHome() {
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={3} xl={3}>
                         <div className='mt-4 p-4 rounded bg-secondary text-white' style={{ height: "35vh" }}>
-                            <h1 style={{ fontSize: "2rem"}}>Scramble</h1>
-                            <p style={{ fontSize: "1rem"}}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
+                            <h1 style={{ fontSize: "2rem" }}>Scramble</h1>
+                            <p style={{ fontSize: "1rem" }}>Words are written in straight lines forwards backwards up down and diagonally when you find a word you circle or highlight it. Once you have found all the words you win.</p>
                             <Button className="food-health-nutrion-item-button d-flex d-sm-inline d-md-inline d-lg-inline d-xl-inline" onClick={() => { navigate('/carbohydratescramble') }}>Play</Button>
                         </div>
                     </Col>
@@ -83,7 +83,7 @@ function FoodHealthHome() {
                     </Col>
                 </Row>
             </Container>
-            </>
+        </>
     )
 }
 
