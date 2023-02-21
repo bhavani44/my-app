@@ -97,7 +97,7 @@ var completeList = [
 ];
 function getRandomWords() {
   let lst = [];
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 5; i++) {
     let currItem =
       completeList[Math.floor(Math.random() * completeList.length)];
     if (lst.indexOf(currItem) === -1) {

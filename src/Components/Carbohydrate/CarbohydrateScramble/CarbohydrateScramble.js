@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./carbohydratescramble.css"
 import CarbohydrateScrambleItem from './CarbohydrateScrambleItem'
-// import ShortNotes from './ShortNotes'
 
 const scrambledWords = [
   {
@@ -63,7 +62,7 @@ const scrambledWords = [
   {
     sId:(new Date()).getTime,
     scramble_id:8,
-    scrambled_word:'KMNI',
+    scrambled_word:'KMLI',
     correct_word:'MILK',
     scramble_message:"milk text will be added here DFJDKFL DKFHDKLFJSDFKLDSJ F DSFSDJLJDF DFJDFLSKDJF..",
     scramble_url:"milk.png"
@@ -76,7 +75,6 @@ function CarbohydrateScramble() {
   return (
     <>
       <CarbohydrateScrambleItem scrambleWords={scrambledWords}/>
-      {/* <ShortNotes/> */}
     </>
   )
 }

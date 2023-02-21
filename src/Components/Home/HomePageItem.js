@@ -17,7 +17,7 @@ function HomePageItem({ data }) {
 
                             return (
                                 <>
-                                    <Col xs={12} sm={6} md={4}>
+                                    <Col xs={12} sm={6} md={4} className="div-center">
                                         <div className="image-flip">
                                             <div className='mainflip flip-0'>
                                                 <div className='frontside'>
@@ -30,9 +30,8 @@ function HomePageItem({ data }) {
                                                 </div>
                                                 <div className='backside'>
                                                     <div className='card'>
-                                                        <div className='card-body text-center mt-4'>
+                                                        <div className='card-body text-center d-flex flex-column justify-content-around'>
                                                             <h4 className='card-title'>{item.name}</h4>
-                                                            <p className='card-text'>This is basic card with image on top, title, Description and button.</p>
                                                             <button onClick={()=>{navigate(`/${item.id}`)}} className='btn btn-outline-light btn-lg text-light'>Start</button>
                                                         </div>
                                                     </div>

@@ -25,7 +25,7 @@ const scrambledWords = [
     scrambled_word:'UGROUNDNT',
     correct_word:'GROUNDNUT',
     scramble_message:"groundnut text will be added here.",
-    scramble_url:""
+    scramble_url:"peanut.png"
   },
   {
     sId:(new Date()).getTime,
@@ -33,7 +33,7 @@ const scrambledWords = [
     scrambled_word:'SULNFOE-WROIL',
     correct_word:'SUNFLOWER-OIL',
     scramble_message:"sunflower-oil text will be added here.",
-    scramble_url:"sunflower-oil url"
+    scramble_url:"sunflower-oil.png"
   },
   {
     sId:(new Date()).getTime,

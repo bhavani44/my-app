@@ -24,3 +24,8 @@ body{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+@media (min-width: 768px) {
+    .food-container {
+      min-height: 25vh;
+    }
+  }

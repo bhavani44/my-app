@@ -8,7 +8,6 @@ import HomeRenderComponent from './Components/Home/HomeRenderComponent';
 import SubpageRenderComponent from './Components/SubpageRenderComponent';
 import FoodHealthHome from './Components/FoodHealthNutriton/FoodNutritionHome';
 import CarbohydrateHome from './Components/Carbohydrate/CarbohydrateHome';
-import FatHome from './Components/Fat/FatHome';
 import ProteinHome from './Components/Protein/ProteinHome';
 import VitaminHome from './Components/Vitamin/VitaminHome';
 import MineralsHome from './Components/Minerals/MineralsHome';
@@ -17,6 +16,7 @@ import FoodHealthWordSearch from './Components/FoodHealthNutriton/WordSearch/Wor
 import FoodHealthScramble from './Components/FoodHealthNutriton/FoodHealthScramble/FoodHealthScramble';
 import FatScramble from './Components/Fat/FatScramble/FatScramble';
 import CarbohydrateScramble from './Components/Carbohydrate/CarbohydrateScramble/CarbohydrateScramble';
+import FatHome from './Components/Fat/FatHome';
 // import FoodHealthScramble from './Components/FoodHealthNutriton/FoodHealthScramble/FoodHealthScramble';
 
 

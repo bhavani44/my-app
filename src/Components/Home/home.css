@@ -129,7 +129,8 @@ section {
     min-height: 312px;
     max-height: 312px;
     max-width: 312px;
-    width:100%;
+    min-width: 312px;
+    /* width:100%; */
     border-radius: 1rem;
     padding:5px;
     background-color: #030e12;

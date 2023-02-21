@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./foodhealthscramble.css"
-import FoodHealthScrambleItem from './FoodHealthScrambleItem'
-import ShortNotes from './ShortNotes'
+import FoodHealthScrambleItem from './FoodHealthScrambleItem';
 
 const scrambledWords = [
   {
